@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-Hant" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#174e43">
+  <meta name="description" content="從第一個空拍開始，用教學、練習紀錄與教練確認，一步一步學桌球。">
+  <link rel="icon" href="./icons/paddle.svg" type="image/svg+xml">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+  <title>智慧桌球教練｜今天練什麼</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <div class="app-shell">
+    <header class="app-header">
+      <a class="brand" href="#home" aria-label="智慧桌球教練首頁"><img src="./icons/paddle.svg" alt="" width="40" height="40"><span>智慧桌球<span class="brand-sub">你的隨身練習手冊</span></span></a>
+      <div class="header-actions"><a class="settings-link" href="#feedback">意見回饋</a><a class="settings-link" href="#settings" aria-label="開啟設定">設定 <span aria-hidden="true">⚙</span></a></div>
+    </header>
+    <nav class="main-nav" aria-label="主要導覽">
+      <a href="#home" data-nav="home"><span aria-hidden="true">◷</span>今天練習</a>
+      <a href="#stages" data-nav="stages"><span aria-hidden="true">▤</span>訓練階段</a>
+      <a href="#records" data-nav="records"><span aria-hidden="true">▥</span>練習紀錄</a>
+      <a href="#recorder" data-nav="recorder"><span aria-hidden="true">▷</span>錄影回看</a>
+      <a href="#faq" data-nav="faq"><span aria-hidden="true">?</span>常見問題</a>
+    </nav>
+    <div class="workspace">
+      <div class="workspace-meta"><span>循序漸進 · 從零開始</span><span id="connection-status" role="status">本機練習手冊</span></div>
+      <div class="context-bar" id="role-context" hidden></div>
+      <p class="caption muted" id="cloud-status" role="status">雲端同步：未設定</p>
+      <div id="storage-error" class="notice error" role="alert" hidden></div>
+      <div id="message" class="notice success" role="status" hidden></div>
+      <main id="main" tabindex="-1"><p>正在整理你的練習手冊…</p></main>
+      <footer class="app-footer"><span class="sample-dot" aria-hidden="true"></span>建議範例，待教練審核<br><small>教學、週數、次數與自評門檻皆為原型範例。</small></footer>
+    </div>
+  </div>
+  <dialog id="confirm-dialog" aria-labelledby="dialog-title"><h2 id="dialog-title"></h2><p id="dialog-body"></p><form method="dialog" class="actions"><button class="btn secondary" value="cancel">取消</button><button id="dialog-confirm" class="btn" value="confirm">確認</button></form></dialog>
+  <noscript>請啟用瀏覽器的 JavaScript，才能使用教學、紀錄與評估功能。</noscript>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
